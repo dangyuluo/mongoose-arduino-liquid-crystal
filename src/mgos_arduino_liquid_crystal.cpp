@@ -11,3 +11,9 @@ LiquidCrystal *mgos_arduino_lcd_create(int rs, int en, int d4, int d5, int d6, i
 {
   return new LiquidCrystal(rs, en, d4, d5, d6, d7);
 }
+
+void mgos_arduino_lcd_begin(LiquidCrystal *lcd, int i, int j){
+  if (lcd == nullptr)
+    return;
+  lcd->begin(i, j);
+}
